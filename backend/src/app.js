@@ -23,11 +23,12 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 app.use(passport.initialize());
-
+app.set("trust proxy", 1);
 // routes
 app.use("/auth", authRoutes);
 // app.use("/user", userRoutes);
 app.use("/events", eventRoutes);
 // app.use("/wallet", walletRoutes);
+
 
 export default app;
