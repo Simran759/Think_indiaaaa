@@ -1,0 +1,446 @@
+/* Advanced Hover Effects & Micro-Interactions */
+
+/* Smooth button group animations */
+.button-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.button-group button:hover {
+  z-index: 10;
+  position: relative;
+}
+
+/* Staggered hover effect for button groups */
+.button-group button:hover ~ button {
+  margin-left: 8px;
+  transition: margin 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card lift on hover */
+.card {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(102, 126, 234, 0.2),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Border animation on hover */
+.bordered-element {
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.bordered-element::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2,
+    #667eea
+  );
+  background-size: 200% 200%;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+  animation: none;
+}
+
+.bordered-element:hover::after {
+  opacity: 1;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Text reveal animation */
+.text-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-reveal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-reveal:hover::after {
+  left: 100%;
+}
+
+/* Icon animation */
+.icon-animate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-animate:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.icon-animate:active {
+  transform: scale(0.95);
+}
+
+/* Floating animation for elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-element {
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-element:hover {
+  animation: none;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.pulse-element {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glow effect */
+.glow-element {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glow-element:hover {
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+  text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+/* Underline animation variants */
+.underline-left {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-left::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.underline-left:hover::after {
+  width: 100%;
+}
+
+.underline-center {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-center::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
+}
+
+.underline-center:hover::after {
+  width: 100%;
+  left: 50%;
+}
+
+/* Slide in text animation */
+.slide-text {
+  position: relative;
+  overflow: hidden;
+  height: 1.2em;
+}
+
+.slide-text span {
+  display: block;
+  animation: slideInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce-element:hover {
+  animation: bounce 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tilt effect on hover */
+.tilt-element {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.tilt-element:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
+}
+
+/* Color shift animation */
+.color-shift {
+  background: linear-gradient(
+    90deg,
+    #667eea,
+    #764ba2,
+    #667eea
+  );
+  background-size: 200% 200%;
+  transition: background-position 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.color-shift:hover {
+  animation: colorShift 3s ease infinite;
+}
+
+@keyframes colorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Smooth expand/collapse animation */
+.expandable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expandable.expanded {
+  max-height: 500px;
+}
+
+/* Loading skeleton pulsing */
+.skeleton-pulse {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: skeletonLoad 2s infinite;
+}
+
+@keyframes skeletonLoad {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Smooth number counter animation */
+.counter {
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.counter:hover {
+  color: #667eea;
+  transform: scale(1.05);
+}
+
+/* Badge pulse effect */
+.badge-pulse {
+  position: relative;
+  animation: badgePulse 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Smooth backdrop blur transitions */
+.blur-on-hover {
+  transition: backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(0px);
+}
+
+.blur-on-hover:hover {
+  backdrop-filter: blur(10px);
+}
+
+/* Smooth list item animation */
+.list-item-animate {
+  animation: slideInLeft 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.list-item-animate:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.list-item-animate:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.list-item-animate:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.list-item-animate:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.list-item-animate:nth-child(n+6) {
+  animation-delay: 0.5s;
+}
+
+/* Smooth transition for disabled states */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Focus ring animation */
+:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+  animation: focusRing 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes focusRing {
+  0% {
+    outline-width: 0;
+  }
+  100% {
+    outline-width: 2px;
+  }
+}
+
+/* Success/Error state animations */
+.success-state {
+  animation: successPulse 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: #10b981;
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.error-state {
+  animation: errorShake 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #ef4444;
+}
+
+@keyframes errorShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}

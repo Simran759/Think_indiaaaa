@@ -15,12 +15,14 @@ html, body {
   z-index: 1000;
   background: linear-gradient(135deg, #181c24 60%, #232a36 100%);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.18);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 1rem 0;
+  backdrop-filter: blur(10px);
 }
 
 .navbar.scrolled {
   padding: 0.8rem 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
 }
 .navbar .container {
   display: flex;
@@ -36,10 +38,16 @@ html, body {
   align-items: center;
   gap: 2rem;
   margin-left: auto; /* push menu to the right */
+  transition: all 0.3s ease;
 }
 
 .navbar-brand {
   text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
 }
 
 .logo {
@@ -53,6 +61,7 @@ html, body {
   font-weight: 700;
   color: #fff;
   margin-right: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-accent {
@@ -87,7 +96,7 @@ html, body {
   color: #fff;
   font-weight: 500;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   padding: 0.5rem 0;
 }
@@ -102,7 +111,7 @@ html, body {
   width: 0;
   height: 2px;
   background: linear-gradient(135deg, var(--primary-orange), var(--accent-yellow));
-  transition: width 0.3s ease;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover::after,

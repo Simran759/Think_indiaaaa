@@ -7,7 +7,7 @@ import API_BASE_URL from '../config/api';
 const Navbar = () => {
   const navLinks = [
     // { path: '/', label: '<-' },
-    { path: '/youthfest', label: 'Home' },
+    // { path: '/youthfest', label: 'Home' },
     
     { path: '/youthfest/event', label: 'Events' },
     { path: '/youthfest/2024', label: 'Previous Glimpse' },

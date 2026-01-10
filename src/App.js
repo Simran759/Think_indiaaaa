@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -16,7 +15,6 @@ import CompleteProfile from "./pages/CompleteProfile";
 import Dashboard from "./pages/Dashboard";
 
 
-import YouthfestHome from "./pages/youthfest/youthfestHome";
 import Youthfest2024 from "./pages/youthfest/youthfest2024";
 import Youthfestevent from "./pages/youthfest/events";
 import './App.css';
@@ -24,8 +22,6 @@ import './App.css';
 // Create a wrapper component to use useLocation hook
 function App() {
   const location = useLocation();
-  const hideLayoutRoutes = ['/login', '/post-login'];
-  const shouldHideLayout = hideLayoutRoutes.includes(location.pathname);
 
 
   // Disable browser's scroll restoration
@@ -58,7 +54,6 @@ function App() {
           <Route path="/post-login" element={<PostLogin />} />
           <Route path="/complete-profile" element={<CompleteProfile />} />
           <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/youthfest" element={<YouthfestHome />} />
             <Route path="/youthfest/2024" element={<Youthfest2024 />} />
             <Route path="/youthfest/event" element={<Youthfestevent />} />
 

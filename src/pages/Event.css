@@ -5,6 +5,7 @@
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  animation: pageEnter 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 
@@ -13,6 +14,7 @@
   padding: 120px 0 80px;
   text-align: center;
   color: var(--white);
+  animation: slideInDown 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .upcoming-events
 {
@@ -49,7 +51,7 @@
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(20, 12, 41, 0.1);
-  transition: transform 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .event-card:hover {

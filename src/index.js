@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './GlobalStyles.css';
+import './PageAnimations.css';
+import './ResponsiveDesign.css';
+import './HoverEffects.css';
 
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';

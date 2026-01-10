@@ -30,7 +30,7 @@ const Home = () => {
               At MNIT, we are more than students—we are dreamers, doers, and changemakers. Through learning, dialogue, and community service, we strive to shape a future where India leads with innovation and compassion.
             </p>
             <div className="hero-buttons">
-              <a href="/youthfest" className="btn btn-highlight"> Explore YouthFest</a>
+              <a href="/youthfest/event" className="btn btn-highlight"> Explore YouthFest</a>
             </div>
           </motion.div>
         </div>

@@ -4,6 +4,7 @@
   background: #f8fafc; /* neutral light */
   padding: 50px 16px 80px;
   font-family: system-ui, -apple-system, sans-serif;
+  animation: pageEnter 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* HEADER */
