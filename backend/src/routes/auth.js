@@ -12,6 +12,8 @@ router.post("/register", async (req, res) => {
   try {
     const { email, password, name } = req.body;
 
+    console.log("📝 Register request received:", { email, name });
+
     if (!email || !password || !name) {
       return res.status(400).json({ error: "All fields required" });
     }
@@ -31,6 +33,7 @@ router.post("/register", async (req, res) => {
     });
 
     await user.save();
+    console.log("✅ User created:", user._id);
 
     // Generate JWT token
     const token = jwt.sign(
@@ -48,8 +51,8 @@ router.post("/register", async (req, res) => {
 
     res.json({ success: true, message: "Registered successfully" });
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Registration failed" });
+    console.error("❌ Register error:", err.message, err.stack);
+    res.status(500).json({ error: err.message || "Registration failed" });
   }
 });
 
@@ -57,6 +60,8 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
+
+    console.log("🔐 Login request received:", { email });
 
     if (!email || !password) {
       return res.status(400).json({ error: "Email and password required" });
@@ -74,6 +79,8 @@ router.post("/login", async (req, res) => {
       return res.status(400).json({ error: "Invalid email or password" });
     }
 
+    console.log("✅ Login successful:", user._id);
+
     // Generate JWT token
     const token = jwt.sign(
       { id: user._id },
@@ -90,8 +97,8 @@ router.post("/login", async (req, res) => {
 
     res.json({ success: true, message: "Logged in successfully" });
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Login failed" });
+    console.error("❌ Login error:", err.message, err.stack);
+    res.status(500).json({ error: err.message || "Login failed" });
   }
 });
 
