@@ -23,9 +23,11 @@ router.get(
       { expiresIn: "7d" }
     );
 
-    res.cookie("token", token, {
-      secure:true,
-      sameSite: "none"
+     res.cookie("token", token, {
+      httpOnly: true,               // ✅ REQUIRED
+      secure: process.env.NODE_ENV === "production", // ✅ prod only
+      sameSite: "none",             // ✅ cross-site
+      maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
     res.redirect(`${FRONTEND_URL}/post-login`);
