@@ -12,13 +12,27 @@ import eventRoutes from "./routes/Registration.js";
 
 const app = express();
 
+// Log CORS configuration for debugging
+console.log("🔐 CORS Configuration:");
+console.log("   FRONTEND_URL:", FRONTEND_URL);
+
 // 🔥 CORS CONFIG (THIS IS THE IMPORTANT PART)
-app.use(
-  cors({
-    origin: FRONTEND_URL,
-    credentials: true
-  })
-);
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin || origin === FRONTEND_URL) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS policy: Origin not allowed"), false);
+    }
+  },
+  credentials: true,
+  optionsSuccessStatus: 200,
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(cookieParser());
