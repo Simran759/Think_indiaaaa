@@ -3,6 +3,7 @@ import events from "../../data/event";
 import EventCard from "../../components/EventCard.jsx";
 import "./events.css";
 import Navbar from "../../components/youthfestNavbar.js";
+import API_BASE_URL from "../../config/api";
 
 export default function Events() {
   const [loadingId, setLoadingId] = useState(null);
@@ -13,7 +14,7 @@ export default function Events() {
   const handleRegister = async (event) => {
     setLoadingId(event.id);
 
-    const me = await fetch("http://localhost:5000/auth/me", {
+    const me = await fetch(`${API_BASE_URL}/auth/me`, {
       credentials: "include",
     });
 
@@ -28,7 +29,7 @@ export default function Events() {
       return;
     }
 
-    const res = await fetch("http://localhost:5000/events/register", {
+    const res = await fetch(`${API_BASE_URL}/events/register`, {
       method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
@@ -64,7 +65,7 @@ export default function Events() {
 
     setLoadingId(event.id);
 
-    const res = await fetch("http://localhost:5000/events/join-team", {
+    const res = await fetch(`${API_BASE_URL}/events/join-team`, {
       method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },

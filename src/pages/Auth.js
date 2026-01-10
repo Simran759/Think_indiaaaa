@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import "./auth.css";
+import API_BASE_URL from "../config/api";
 
 export default function Auth() {
   // 🚫 DO NOT show login page if already logged in
   useEffect(function () {
-    fetch("http://localhost:5000/auth/me", {
+    fetch(`${API_BASE_URL}/auth/me`, {
       credentials: "include"
     })
       .then(res => {
@@ -15,7 +16,7 @@ export default function Auth() {
   }, []);
 
   function loginWithGoogle() {
-    window.location.href = "http://localhost:5000/auth/google";
+    window.location.href = `${API_BASE_URL}/auth/google`;
   }
 
   return React.createElement(

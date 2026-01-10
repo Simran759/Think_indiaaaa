@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
+import API_BASE_URL from "../config/api";
 
 export default function PostLogin() {
   useEffect(() => {
-    fetch("http://localhost:5000/auth/me", {
+    fetch(`${API_BASE_URL}/auth/me`, {
       credentials: "include"
     })
       .then(res => res.json())

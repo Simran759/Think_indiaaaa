@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import Navbar from "../components/Navbar";
+import API_BASE_URL from "../config/api";
 export default function Dashboard() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -10,7 +11,7 @@ export default function Dashboard() {
     if (!ok) return;
 
     const res = await fetch(
-      `http://localhost:5000/events/unregister/${eventId}`,
+      `${API_BASE_URL}/events/unregister/${eventId}`,
       {
         method: "DELETE",
         credentials: "include",
@@ -29,7 +30,7 @@ export default function Dashboard() {
   };
 
   useEffect(function () {
-    fetch("http://localhost:5000/auth/me", {
+    fetch(`${API_BASE_URL}/auth/me`, {
       credentials: "include"
     })
       .then(res => {
@@ -56,7 +57,7 @@ export default function Dashboard() {
       });
   }, []);
   useEffect(() => {
-  fetch("http://localhost:5000/events/my-registrations", {
+  fetch(`${API_BASE_URL}/events/my-registrations`, {
     credentials: "include"
   })
     .then(res => res.json())
@@ -83,7 +84,7 @@ return React.createElement(
       {
         className: "logout-btn",
         onClick: function () {
-          fetch("http://localhost:5000/auth/logout", {
+          fetch(`${API_BASE_URL}/auth/logout`, {
             credentials: "include"
           }).then(() => (window.location.href = "/"));
         }

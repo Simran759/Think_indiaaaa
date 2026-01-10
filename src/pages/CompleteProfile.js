@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./CompleteProfile.css";
+import API_BASE_URL from "../config/api";
 
 export default function CompleteProfile() {
   const [phone, setPhone] = useState("");
@@ -9,7 +10,7 @@ export default function CompleteProfile() {
 
   // Protect this page
   useEffect(function () {
-    fetch("http://localhost:5000/auth/me", {
+    fetch(`${API_BASE_URL}/auth/me`, {
       credentials: "include"
     })
       .then(res => {
@@ -31,7 +32,7 @@ export default function CompleteProfile() {
   function submitProfile(e) {
     e.preventDefault();
 
-    fetch("http://localhost:5000/auth/complete-profile", {
+    fetch(`${API_BASE_URL}/auth/complete-profile`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -1,11 +1,12 @@
 import { useState } from "react";
+import API_BASE_URL from "../../config/api";
 
 export default function JoinTeam() {
   const [code, setCode] = useState("");
 
   const join = async () => {
     const res = await fetch(
-      "http://localhost:5000/api/registration/join-team",
+      `${API_BASE_URL}/api/registration/join-team`,
       {
         method: "POST",
         credentials: "include",

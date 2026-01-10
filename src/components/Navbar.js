@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
+import API_BASE_URL from '../config/api';
 
 const Navbar = () => {
   const navLinks = [
@@ -41,7 +42,7 @@ const Navbar = () => {
     };
   }, [isOpen]);
 useEffect(() => {
-  fetch("http://localhost:5000/auth/me", {
+  fetch(`${API_BASE_URL}/auth/me`, {
     credentials: "include"
   })
     .then(res => res.ok ? res.json() : null)
