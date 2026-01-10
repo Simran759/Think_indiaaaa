@@ -25,7 +25,7 @@ router.get(
 
     res.cookie("token", token, {
       secure:true,
-      sameSite: "lax"
+      sameSite: "none"
     });
 
     res.redirect(`${FRONTEND_URL}/post-login`);
