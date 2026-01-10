@@ -24,7 +24,7 @@ router.get(
     );
 
      res.cookie("token", token, {
-      httpOnly: true,               // ✅ REQUIRED
+      // httpOnly: true,               // ✅ REQUIRED
       secure: process.env.NODE_ENV === "production", // ✅ prod only
       sameSite: "none",             // ✅ cross-site
       maxAge: 7 * 24 * 60 * 60 * 1000,
