@@ -13,6 +13,7 @@ const Navbar = () => {
     // { path: '/work', label: 'Our Work' }
   ];
   const [isOpen, setIsOpen] = useState(false);
+  const [user, setUser] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const location = useLocation();
@@ -39,7 +40,14 @@ const Navbar = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isOpen]);
-
+useEffect(() => {
+  fetch("http://localhost:5000/auth/me", {
+    credentials: "include"
+  })
+    .then(res => res.ok ? res.json() : null)
+    .then(data => setUser(data))
+    .catch(() => setUser(null));
+}, []);
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
   };
@@ -88,6 +96,30 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+             {!user ? (
+              <Link to="/login" className="nav-link">
+                Login
+              </Link>
+            ) : (
+              <div
+                style={{
+                  width: "36px",
+                  height: "36px",
+                  borderRadius: "50%",
+                  background: "#e86704ff",
+                  color: "#000",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  fontWeight: "bold"
+                }}
+                onClick={() => window.location.href = "/dashboard"}
+              >
+                {user.name[0].toUpperCase()}
+              </div>
+            )}
+            
           </div>
         )}
 

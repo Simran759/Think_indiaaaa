@@ -1,0 +1,75 @@
+.failed-page {
+  height: 100vh;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, sans-serif;
+}
+
+.failed-card {
+  background: white;
+  padding: 40px;
+  width: 360px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.failed-card h1 {
+  color: #dc2626;
+  margin-bottom: 10px;
+}
+
+.failed-card p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.failed-card button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #0f172a;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .failed-page {
+    padding: 16px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .failed-card {
+    width: 100%;
+    max-width: 340px;
+    padding: 28px 22px;
+  }
+
+  .failed-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .failed-card p {
+    font-size: 14px;
+  }
+
+  .failed-card button {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
+/* 📱 EXTRA SMALL PHONES */
+@media (max-width: 480px) {
+  .failed-card {
+    max-width: 100%;
+    padding: 24px 18px;
+  }
+
+  .failed-card h1 {
+    font-size: 1.4rem;
+  }
+}

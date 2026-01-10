@@ -197,7 +197,7 @@ const Youthfest = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="event-card past"
+                            className="event-card-past"
                           >
                             <div className="event-image" style={{ position: 'relative', width: '100%', height: '320px', borderRadius: '18px 18px 0 0', overflow: 'hidden', boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}>
                               <img 

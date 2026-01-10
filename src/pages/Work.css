@@ -1,4 +1,10 @@
 /* Work Hero Section */
+.page {
+  background: #f5f5f5;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .work-hero {
   background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
   padding: 120px 0 80px;

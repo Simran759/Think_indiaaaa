@@ -1,0 +1,175 @@
+.event-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* Banner */
+.event-banner {
+  position: relative;
+  height: 220px;
+}
+
+.event-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.65),
+    rgba(15, 23, 42, 0.05)
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+}
+
+.event-banner-overlay h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Content */
+.event-content {
+  padding: 20px;
+}
+
+.event-desc {
+  color: #475569;
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+/* Meta */
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+/* Actions */
+.event-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 8px; /* 👈 adds breathing space from meta */
+}
+/* ===============================
+   ACTION BUTTON ROW (FIXED)
+================================ */
+
+.event-actions {
+  margin-top: 18px;
+}
+
+/* SINGLE ROW */
+.action-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* COMMON BUTTON STYLE */
+.rulebook-btn,
+.register-btn,
+.join-btn {
+  flex: 1;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* RULEBOOK */
+.rulebook-btn {
+  background: #e2e8f0;
+  color: #0f172a;
+  border: 10px solid #e2e8f0;
+}
+
+.rulebook-btn:hover {
+  background: #e5e7eb;
+}
+
+/* REGISTER (PRIMARY) */
+.register-btn {
+  background: #6d28d9;
+  color: #ffffff;
+  border: none;
+}
+
+.register-btn:hover {
+  background: #5b21b6;
+}
+
+/* JOIN TEAM (SECONDARY) */
+.join-btn {
+  background: #ffffff;
+  color: #6d28d9;
+  border: 2px solid #6d28d9;
+}
+
+.join-btn:hover {
+  background: #f5f3ff;
+}
+
+/* GOOGLE FORM NOTE */
+.google-note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.google-note a {
+  color: #6d28d9;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* JOIN TEAM INPUT */
+.join-team-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.join-team-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #cbd5f5;
+  outline: none;
+}
+
+.join-team-box button {
+  background: #16a34a;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 16px;
+}

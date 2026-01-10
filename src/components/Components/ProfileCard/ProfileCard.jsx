@@ -12,7 +12,7 @@ const ProfileCard = ({
   linkedinUrl,
   instagramUrl,
 }) => (
-  <div className="profile-card">
+  <div className="profile-card style={{backgroundColor:'#181828'}}">
     <div className="profile-photo-top">
       <img src={avatarUrl} alt={name} />
     </div>

@@ -1,0 +1,144 @@
+.auth-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  font-family: system-ui, sans-serif;
+}
+
+.auth-card {
+  width: 820px;
+  height: 420px;
+  display: flex;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* LEFT */
+.auth-left {
+  flex: 1;
+  /* background: #0f172a; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-left img {
+  width: 100%;
+}
+
+/* RIGHT */
+.auth-right {
+  flex: 1;
+  padding: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-right h2 {
+  margin-bottom: 10px;
+}
+
+.hint {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.google-btn,
+.logout-btn {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.google-btn:hover,
+.logout-btn:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.google-btn img {
+  width: 18px;
+}
+
+.logout-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+}
+
+.welcome {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+/* ======================= */
+/* 📱 MOBILE RESPONSIVE */
+/* ======================= */
+@media (max-width: 768px) {
+  .auth-page {
+    padding: 16px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .auth-card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    border-radius: 12px;
+  }
+
+  .auth-left {
+    height: 180px;
+  }
+
+  .auth-left img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .auth-right {
+    padding: 24px 20px;
+  }
+
+  .auth-right h2 {
+    font-size: 1.4rem;
+  }
+
+  .hint {
+    font-size: 13px;
+  }
+
+  .google-btn,
+  .logout-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
+/* 📱 EXTRA SMALL PHONES */
+@media (max-width: 480px) {
+  .auth-left {
+    height: 150px;
+  }
+
+  .auth-right {
+    padding: 20px 16px;
+  }
+
+  .auth-right h2 {
+    font-size: 1.25rem;
+  }
+}

@@ -100,7 +100,7 @@ const Team = () => {
 <section className="section faculty" style={{ position: 'relative', zIndex: 2, marginTop: '-12px' }}>
   <div className="container text-center">
     <h2 style={{ color: '#fff', marginBottom: 12, marginTop: 0, fontSize: '2rem' }}>Faculty Advisors</h2>
-    <div className="team-grid faculty-grid">
+    <div className="team-grid faculty-grid" >
       {Faculty.map((m, i) => (
         <TeamMember 
           key={m.linkedinUrl || m.instagramUrl} // use unique URL instead of id

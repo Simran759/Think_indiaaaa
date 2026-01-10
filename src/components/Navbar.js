@@ -13,6 +13,8 @@ const Navbar = () => {
   ];
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [user, setUser] = useState(null);
+
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const location = useLocation();
 
@@ -38,6 +40,14 @@ const Navbar = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isOpen]);
+useEffect(() => {
+  fetch("http://localhost:5000/auth/me", {
+    credentials: "include"
+  })
+    .then(res => res.ok ? res.json() : null)
+    .then(data => setUser(data))
+    .catch(() => setUser(null));
+}, []);
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
@@ -87,29 +97,98 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            {!user ? (
+  <Link to="/login" className="nav-link">
+    Login
+  </Link>
+) : (
+  <div
+    style={{
+      width: "36px",
+      height: "36px",
+      borderRadius: "50%",
+      background: "#e86704ff",
+      color: "#000",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      cursor: "pointer",
+      fontWeight: "bold"
+    }}
+    onClick={() => window.location.href = "/dashboard"}
+  >
+    {user.name[0].toUpperCase()}
+  </div>
+)}
+
           </div>
         )}
 
         {/* Mobile Menu */}
         {isMobile && (
-          <>
-            <div className="navbar-toggle" onClick={toggleMenu} style={{ color: '#FFD93D', zIndex: 2100, background: 'none', border: 'none', padding: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',fontSize: '20px' }}>
-              {isOpen ? <FaTimes size={28} color="#FFD93D" /> : <FaBars size={28} color="#FFD93D" />}
-            </div>
-            <div className={`navbar-menu${isOpen ? ' active' : ''}`} style={{ marginLeft: 0, zIndex: 2000 }}>
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
-                  onClick={closeMenu}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </>
+  <>
+    <div
+      className="navbar-toggle"
+      onClick={toggleMenu}
+      style={{
+        color: '#FFD93D',
+        zIndex: 2100,
+        background: 'none',
+        border: 'none',
+        padding: 0,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '20px'
+      }}
+    >
+      {isOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
+    </div>
+
+    <div className={`navbar-menu${isOpen ? ' active' : ''}`}>
+
+      {/* NAV LINKS */}
+      {navLinks.map((link) => (
+        <Link
+          key={link.path}
+          to={link.path}
+          className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+          onClick={closeMenu}
+        >
+          {link.label}
+        </Link>
+      ))}
+       {!user ? (
+          <Link
+            to="/login"
+            className="nav-link login-link"
+            onClick={closeMenu}
+          >
+            Login
+          </Link>
+        ) : (
+          <div
+            className="mobile-profile"
+            onClick={() => {
+              closeMenu();
+              window.location.href = "/dashboard";
+            }}
+          >
+            {/* <div className="profile-circle">
+              {user.name[0].toUpperCase()}
+            </div> */}
+            <span>Dashboard</span>
+          </div>
         )}
+
+      
+     
+
+    </div>
+   
+  </>
+)}
+
       </div>
     </nav>
   );

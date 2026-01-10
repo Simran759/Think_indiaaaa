@@ -19,7 +19,7 @@ const Work = () => {
       return () => clearInterval(interval);
     }, [slideshowImages.length]);
   return (
-   <div className="events-page" style={{ background: 'linear-gradient(135deg, #0a0a1f  )', color: '#fff', minHeight: '100vh' }}>
+   <div className="work-page" style={{ background: 'linear-gradient(135deg, #0a0a1f  )', color: '#fff', minHeight: '100vh' }}>
     <Navbar/>
       {/* Hero Section */}
   <section style={{ position: "relative", width: "100%", height: "730px", overflow: "hidden" }}>

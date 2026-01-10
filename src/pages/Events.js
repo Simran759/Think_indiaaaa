@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaMapMarkerAlt, FaClock, FaUsers } from 'react-icons/fa';
-import './Events.css';
+import './Event.css';
 import Navbar from '../components/Navbar';
 const Events = () => {
   // Slideshow images for Our Events
@@ -114,10 +114,14 @@ const Events = () => {
   ];
 
   return (
-  <div className="events-page" style={{ background: 'linear-gradient(135deg, #0a0a1f  )', color: '#fff', minHeight: '100vh' }}>
+  <div className="events-page-root">
+
+
    <Navbar/>
     {/* Hero Section */}
-<section style={{ position: "relative", width: "100%", height: "730px", overflow: "hidden" }}>
+<section className="events-page-hero">
+
+    
   {/* Slide background */}
   <motion.div
     key={slideIndex} // important for fade animation
@@ -222,8 +226,11 @@ const Events = () => {
 
 
       {/* Upcoming Events Section */}
-      <section className="section upcoming-events">
-        <div className="container" style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <section className="events-page-section events-page-section--upcoming">
+
+
+        <div className="events-page-container">
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -234,7 +241,7 @@ const Events = () => {
             <p className="section-subtitle" style={{ color: '#232a36', textAlign: 'center', fontSize: '1.15rem', marginBottom: 32 }}>Don't miss out on these exciting opportunities to learn, network, and grow</p>
           </motion.div>
 
-          <div className="events-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 36, marginTop: 24 }}>
+          <div className="events-page-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: 36, marginTop: 24 }}>
             {upcomingEvents.map((event, index) => (
              <motion.div
   key={event.id}
@@ -242,7 +249,7 @@ const Events = () => {
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6, delay: index * 0.1 }}
   viewport={{ once: true }}
-  className="event-card upcoming"
+  className="event-card-upcoming"
 >
   <div
     className="event-image"
@@ -347,8 +354,9 @@ const Events = () => {
       </section>
 
       {/* Past Events Section */}
-      <section className="section past-events">
-        <div className="container">
+      <section className="events-page-section events-page-section--past">
+       <div className="events-page-container">
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -359,7 +367,8 @@ const Events = () => {
             <p className="section-subtitle">Celebrating our successful events and their impact on the community</p>
           </motion.div>
 
-          <div className="events-grid">
+         <div className="events-page-grid">
+
             {pastEvents.map((event, index) => (
               <motion.div
                 key={event.id}
@@ -367,7 +376,7 @@ const Events = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="event-card past"
+                className="event-card-past"
               >
                 <div className="event-image" style={{ position: 'relative', width: '100%', height: '320px', borderRadius: '18px 18px 0 0', overflow: 'hidden', boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}>
                   <img 

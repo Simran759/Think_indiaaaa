@@ -139,3 +139,64 @@
 .profile-social-icon:hover {
   color: #fff;
 }
+@media (max-width: 768px) {
+  
+  .profile-card {
+    
+    
+     justify-items: center;
+  }
+}/* ============================= */
+/* CLEAN, BALANCED SOCIAL ICONS */
+/* ============================= */
+
+.profile-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+/* Button base */
+.profile-social-icon,
+.contact-btn {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #c9a24d;        /* gold */
+  border-radius: 10px;
+
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Icons */
+.profile-social-icon svg,
+.contact-btn svg {
+  width: 35px;
+  height: 35px;
+  /* color: #181828;             dark icon */
+  display: block;
+}
+
+/* Anchor reset */
+.profile-social-icon {
+  text-decoration: none;
+}
+
+/* Hover effect */
+.profile-social-icon:hover,
+.contact-btn:hover {
+  background: #e0bb63;
+  transform: translateY(-2px);
+  /* box-shadow: 0 8px 18px rgba(0,0,0,0.35); */
+}

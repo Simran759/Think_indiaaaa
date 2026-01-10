@@ -1,0 +1,108 @@
+.dashboard-page {
+  padding: 100px;
+  font-family: system-ui, sans-serif;
+  background: #f1f5f9;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logout-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #dc2626;
+  color: white;
+  cursor: pointer;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.wallet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coins {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.recharge-btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 90px 14px 30px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-header h1 {
+     padding: 40px 14px 10px;
+    font-size: 1.6rem;
+  }
+
+  .logout-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    word-break: break-word;
+  }
+}
+.registered-event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.team-code {
+  font-size: 0.85rem;
+  color: #2563eb;
+}
+
+.danger-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.danger-btn:hover {
+  background: #b91c1c;
+}

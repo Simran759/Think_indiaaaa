@@ -3,3 +3,4 @@
 node_modules/
 >>>>>>> f2f83cddfdc20394dfd84e4891a0092368cf11d3
 node_modules
+.env
