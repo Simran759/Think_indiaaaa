@@ -2,6 +2,7 @@ import express from "express";
 import passport from "passport";
 import jwt from "jsonwebtoken";
 import { requireAuth } from "../middleware/auth.js";
+import FRONTEND_URL from "../config/frontendUrl.js";
 
 const router = express.Router();
 
@@ -13,7 +14,7 @@ router.get(
   "/google/callback",
   passport.authenticate("google", {
     session: false,
-    failureRedirect: "http://localhost:3000/login-failed"
+    failureRedirect: `${FRONTEND_URL}/login-failed`
   }),
   (req, res) => {
     const token = jwt.sign(
@@ -27,7 +28,7 @@ router.get(
       sameSite: "lax"
     });
 
-    res.redirect("http://localhost:3000/post-login");
+    res.redirect(`${FRONTEND_URL}/post-login`);
   }
 );
 

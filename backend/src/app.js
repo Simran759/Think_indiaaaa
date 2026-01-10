@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import passport from "passport";
+import FRONTEND_URL from "./config/frontendUrl.js";
 
 import "./config/passport.js";
 import authRoutes from "./routes/auth.js";
@@ -14,7 +15,7 @@ const app = express();
 // 🔥 CORS CONFIG (THIS IS THE IMPORTANT PART)
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: FRONTEND_URL,
     credentials: true
   })
 );
