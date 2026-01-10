@@ -1,4 +1,4 @@
-let API_BASE_URL = process.env.REACT_APP_API_URL || "https://think-indiaa.vercel.app";
+let API_BASE_URL = "https://think-india-mnit.onrender.com";
 
 // Remove trailing slash if present
 if (API_BASE_URL.endsWith('/')) {
