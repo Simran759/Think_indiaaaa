@@ -11,13 +11,16 @@ const Team = () => {
   const Faculty = [
     { id: "Department of Architecture", name: "Sangeeth S. Pillai Sir", position: "Faculty Advisor", image: "/team_member_pic/Sangeet Pilli.webp", linkedinUrl: "https://www.linkedin.com/in/sangeethspillai/" ,email:"sangeeth.arch@mnit.ac.in"},
     { id: "Department of Chemistry Engineering", name: "Jyoti Joshi Ma'am", position: "Faculty Advisor", image: "/team_member_pic/Jyoti Joshi.webp", linkedinUrl: "https://www.linkedin.com/in/jyoti-joshi-81866710a/",email:"jjoshi.city@mnit.ac.in" },
+   
+    { id: "Department of Mechanical Engineering", name: " Anup Malik sir", position: "Faculty Advisor", image: "/team_member_pic/Anoop_sir.webp", linkedinUrl: "https://www.linkedin.com/in/dr-anup-malik-841bb4158/",email:"anup.mech@mnit.ac.in" },
+     { id: "Department of Mechanical Engineering", name: "Pankaj Kumar Gupta Sir", position: "Faculty Advisor", image: "/team_member_pic/pankaj_sir.webp", linkedinUrl: "",email:"pankaj.mech@mnit.ac.in" },
   ]
 
   const Advisors = [
     { id: "2022UCP1717", name: "Bhavdeep", position: "Advisor", image:"/team_member_pic/Bhavdeep.webp",  linkedinUrl:"https://www.linkedin.com/in/bhavdeep5577/" ,  instagramUrl:"https://www.instagram.com/bhavdeep_singh_22/",email:"2022ucp1717@mnit.ac.in"},
     { id: "2022UCH1187", name: "Kunal Agarwal", position: "Advisor", image: "/team_member_pic/kunal.webp",  linkedinUrl: "https://www.linkedin.com/in/kunal-agrawal-a082b5227/" ,  instagramUrl:"https://www.instagram.com/kunalagarwal2016/",email:"2022uch1187@mnit.ac.in"},
     { id: "2022UMT1408", name: "Jasani Happy Vinodkumar", position: "Advisor", image: "/team_member_pic/JASANI HAPPY VINODKUMAR.webp",  linkedinUrl: "https://www.linkedin.com/in/happy-jasani-73aa07246",  instagramUrl:"https://www.instagram.com/happy_jasani/" ,email:"2022umt1408@mnit.ac.in" },
-    { id: "2022UCE1177", name: "Smith shah", position: "Advisor", image: "/team_member_pic/Smith shah.webp", linkedinUrl: "https://www.linkedin.com/in/smith-shah-b9a648256/",  instagramUrl:"https://www.instagram.com/smithshah_/",email:"2022uce1177@mnit.ac.in" },
+    { id: "2022UCE1177", name: "Smith Shah", position: "Advisor", image: "/team_member_pic/Smith shah.webp", linkedinUrl: "https://www.linkedin.com/in/smith-shah-b9a648256/",  instagramUrl:"https://www.instagram.com/smithshah_/",email:"2022uce1177@mnit.ac.in" },
     
   ];
 
