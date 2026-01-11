@@ -10,7 +10,7 @@ import './Team.css';
 const Team = () => {
   const Faculty = [
     { id: "Department of Architecture", name: "Sangeeth S. Pillai Sir", position: "Faculty Advisor", image: "/team_member_pic/Sangeet Pilli.webp", linkedinUrl: "https://www.linkedin.com/in/sangeethspillai/" ,email:"sangeeth.arch@mnit.ac.in"},
-    { id: "Department of Chemical Engineering", name: "Jyoti Joshi Ma'am", position: "Faculty Advisor", image: "/team_member_pic/Jyoti Joshi.webp", linkedinUrl: "https://www.linkedin.com/in/jyoti-joshi-81866710a/",email:"jjoshi.city@mnit.ac.in" },
+    { id: "Department of Chemistry Engineering", name: "Jyoti Joshi Ma'am", position: "Faculty Advisor", image: "/team_member_pic/Jyoti Joshi.webp", linkedinUrl: "https://www.linkedin.com/in/jyoti-joshi-81866710a/",email:"jjoshi.city@mnit.ac.in" },
   ]
 
   const Advisors = [
