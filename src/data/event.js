@@ -6,7 +6,7 @@ const events = [
       "A fun and challenging race where participants balance a lemon on a spoon while racing against others. Tests focus, balance, and speed.",
     date: "January 14, 2026",
     time: "1:00 PM – 5:00 PM",
-    location: "University Grounds",
+    location: "Sports Ground",
     isTeamEvent: false,
     teamSize: 1,
     googleForm:
