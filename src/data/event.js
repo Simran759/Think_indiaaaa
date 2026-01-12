@@ -22,7 +22,7 @@ const events = [
       "A fast-paced version of cricket played in a smaller arena with limited players. Emphasizes teamwork, strategy, and agility.",
     date: "January 14, 2026",
     time: "1:00 PM – 5:00 PM",
-    location: "Sports Ground",
+    location: "VLTC Back Porch",
     isTeamEvent: true,
     teamSize: 7,
     googleForm:
@@ -95,7 +95,7 @@ const events = [
   },
   {
   id: 8,
-  title: "Y20 Summit – Youth Dialogue",
+  title: "Y20 Summit ",
   description:
     "A youth-centric dialogue session under the Y20 initiative featuring Shriman Jaswant Khatru, Former Chief Engineer, PWD Rajasthan (Quality Control). The session focuses on governance, infrastructure development, quality control, and leadership, offering students practical insights from real administrative experience.",
   date: "January 14, 2026",
