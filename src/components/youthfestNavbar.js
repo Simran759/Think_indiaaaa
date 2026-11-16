@@ -10,7 +10,7 @@ const Navbar = () => {
     // { path: '/youthfest', label: 'Home' },
     
     { path: '/youthfest/event', label: 'Events' },
-    { path: '/youthfest/2024', label: 'Previous Glimpse' },
+    { path: '/youthfest/2026', label: 'Previous Glimpse' },
     // { path: '/work', label: 'Our Work' }
   ];
   const [isOpen, setIsOpen] = useState(false);

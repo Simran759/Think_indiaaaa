@@ -15,7 +15,7 @@ import CompleteProfile from "./pages/CompleteProfile";
 import Dashboard from "./pages/Dashboard";
 
 
-import Youthfest2024 from "./pages/youthfest/youthfest2024";
+import Youthfest2026 from "./pages/youthfest/youthfest2026";
 import Youthfestevent from "./pages/youthfest/events";
 import './App.css';
 
@@ -54,7 +54,7 @@ function App() {
           <Route path="/post-login" element={<PostLogin />} />
           <Route path="/complete-profile" element={<CompleteProfile />} />
           <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/youthfest/2024" element={<Youthfest2024 />} />
+            <Route path="/youthfest/2026" element={<Youthfest2026 />} />
             <Route path="/youthfest/event" element={<Youthfestevent />} />
 
         </Routes>

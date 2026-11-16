@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaMapMarkerAlt, FaClock, FaUsers } from 'react-icons/fa';
 import './Event.css';
 import Navbar from '../components/Navbar';
+import { time } from 'motion';
 const Events = () => {
   // Slideshow images for Our Events
   const slideshowImages = [
@@ -20,13 +21,13 @@ const Events = () => {
   const upcomingEvents = [
         {
       id: 1,
-      title: "Holi Donation Drive",
-      date: "March 2025",
-      time: "9:00 AM - 6:00 PM",
-      location: "College Main Gate, OAT, Hostel Lobbies",
-      description: "A meaningful initiative to collect clothes, books, food items, and stationery, spreading light and hope beyond campus walls.",
-      participants: "200+",
-  image: "/events/Donation_drive.webp"
+      title: "Self-Defense Awareness & Training Workshop",
+      date: "November 2026",
+      time: "7:00 PM – 8:30 PM",
+      location: "Deeksha Shabagar",
+      description: "The Self-Defense Awareness & Training Workshop was a significant initiative aimed at empowering students with essential life skills, personal safety awareness, and confidence-building techniques. The workshop combined expert-led guidance with practical demonstrations and hands-on training. ",
+      participants: "100+Student",
+      image: "/events/defence.webp"
     },
   
 
@@ -41,11 +42,20 @@ const Events = () => {
   //     participants: "50",
   // image: "/events/ethinc_wear.webp"
   //   },
-  
     {
       id: 2,
-      title: " November Technical Workshop",
-      date: "March 2026",
+      title: "Shaheed Diwas",
+      date: "January 2027",
+      time: "10:00 AM - 8:00 PM",
+      location: "OAT",
+      description: "Shaheed Diwas is a solemn national observance dedicated to honoring the courage, patriotism, and supreme sacrifice of India's freedom fighters and fallen heroes. Rather than a festive occasion, the day is marked with deep respect, gratitude, and quiet reflection on the price paid for the nation's independence.",
+      participants: "100+",
+      image: "/events/shaheed_diwas.webp"
+    },
+    {
+      id: 3,
+      title: " Technical Workshop",
+      date: "March 2027",
       time: "10:00 AM - 8:00 PM",
       location: "VLTC Classrooms",
       description: "A knowledge-driven workshop featuring expert speakers on cutting-edge topics like Web Development, AI, and Machine Learning. Students gain practical, real-world insights.",
@@ -55,46 +65,49 @@ const Events = () => {
   ];
 
   const pastEvents = [
-      {id:1,
-    title:"Ganesh Chaturthi Celebration",
-    date: "27-28 August, 2025",
-    location:"Mnit Oat ",
-    description:"The day began with a vibrant procession of Lord Ganesha from Prabha Marg Circle to the Open Air Theatre, filled with dhol-tasha beats, chants of “Ganpati Bappa Morya!”, and energetic student participation. At OAT, celebrations included a dance performance by Level X, Maha Puja and installation, soulful aarti with prasad, and an evening aarti with large student gatherings. With overwhelming participation from students and faculty, the event became a festival of unity, devotion, and cultural harmony, concluding with heartfelt chants as MNIT Jaipur bid farewell to Bappa."
-   ,
-      impact: "500+ students attended , 100+ faculty members , Director Sir and Deans graced the event", 
-  image: "/events/Ganesh_Chaturthi.webp"
-  },
-  {
-    id:2,
-    titlw:"Self-Defense Awareness & Training Workshop",
-    date:"19 November 2025",
-    location:"Deeksha Shabagar",
-    description:"The Self-Defense Awareness & Training Workshop was a significant initiative aimed at empowering students with essential life skills, personal safety awareness, and confidence-building techniques. The workshop combined expert-led guidance with practical demonstrations and hands-on training. Expert Trainers Rtn. Dr. Pallavi Singhvi (Chairperson, Rotary Self Defense Academy) , Shihan Hemant Kumar (Chief Instructor & Technical Director, 5th Dan Black Belt) Joined us for teaching about the defense.",
-    impact:"Expert Trainers , 100+Student Joined",
-    image:"/events/defence.webp"
-  },
+    {
+      id: 1,
+      title: "Ganesh Chaturthi Celebration",
+      date: "14 August, 2026",
+      location: "Mnit Oat ",
+      description: "Ganesh Chaturthi at MNIT Jaipur was celebrated with great devotion and enthusiasm, beginning with a vibrant procession accompanied by dhol-tasha beats and chants of “Ganpati Bappa Morya!”. The festivities featured captivating dance performances, Maha Puja, soulful aartis, and prasad distribution. With enthusiastic participation from students and faculty, the celebration beautifully reflected unity, cultural harmony, and the spirit of togetherness."
+      ,
+      impact: "500+ students attended , 100+ faculty members",
+      image: "/events/Ganesh_Chaturthi.webp"
+    },
+    {
+      id: 2,
+      title: "Human Chess",
+      date: "February 7, 2026 ",
+      location: "VLTC ,MNIT Jaipur",
+      description: "The event combines the thrill of chess with the energy of a live game, as players move across the board according to their team's decisions. It offers a unique blend of intelligence, coordination, and fun, making chess a larger-than-life experience!",
+      impact: "Expert Trainers , 100+Student Joined",
+      image: "/events/human_chess.webp"
+    },
+   
+  
     {
       id: 3,
-      title: " Discover India – The Puzzle Hunt",
-      date: " February 7, 2025 ",
+      title: " Quiz Bowl",
+      date: " February 6, 2026 ",
       location: "VLTC L-008, MNIT Jaipur ",
-      description: "As part of the Blitz events, Think India MNIT organized an exciting puzzle-based treasure hunt, where teams raced to solve riddles, collect pieces, and complete the map of India. The event brilliantly combined logical reasoning, speed, and cultural awareness in a lively competitive spirit.Participants showcased their problem-solving skills while engaging in an intense yet fun-filled race across departments. The creative format and energetic atmosphere made the event a memorable experience, receiving immense appreciation from all."
-      ,impact: "250+ people participated ",
-  image: "/events/discoverhunt.webp"
+      description: "Quiz Bowl is an exciting battle of knowledge, wit, and quick thinking, organized by MNIT Jaipur. Participants compete individually or in teams, answering a variety of intriguing questions spanning diverse fields such as  history, sports, entertainment, and general knowledge."
+      ,impact: "50+ people participated ",
+  image: "/events/quiz_bowl.webp"
     },
      {
       id: 4,
       title: " Tug of War ",
-      date: "January 12, 2025",
+      date: "January 14, 2026",
       location: "University Grounds",
-      description: "The Tug of War event at Youth Fest 2025 witnessed an electrifying atmosphere as 18 teams battled it out in high-energy knockout rounds. The roaring crowds amplified the thrill of each match, making the competition even more intense. The final showdown between Purwanchal ke Sher and Danav kept everyone on the edge of their seats, with Purwanchal ke Sher emerging as the ultimate champions."
+      description: "The Tug of War event at Youth Fest 2026 witnessed an electrifying atmosphere as 18 teams battled it out in high-energy knockout rounds. The roaring crowds amplified the thrill of each match, making the competition even more intense. The final showdown between Purwanchal ke Sher and Danav kept everyone on the edge of their seats, with Purwanchal ke Sher emerging as the ultimate champions."
   , impact: "15+ teams participated",
       image: "/events/Tug_of_war.webp"
     },
     {
       id: 5,
       title: "Satoliya - Reliving Childhood Games ",
-      date: "January 12, 2025",
+      date: "January 14, 2026",
       location: "University Grounds",
       description: "Satoliya 2025 brought back the charm of the traditional game Seven Stones. With 15+ teams battling it out through rounds, semis, and the grand finale, the event turned into a perfect mix of nostalgia and competition. Students from across departments showcased strategy, teamwork, and sportsmanship, making Satoliya one of the most fun and loved highlights of YouthFest 2024.",
       impact: "15+ teams participated",

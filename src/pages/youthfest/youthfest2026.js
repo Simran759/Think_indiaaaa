@@ -23,7 +23,7 @@ const Youthfest = () => {
   const Highlights = [
       {id:1,
     title:"Vivekananda Jayanti",
-    date: "12 January, 2024",
+    date: "12 January, 2026",
     location:"Neeti Shabagar",
     description:"Dedicated to the youth icon Swami Vivekananda, this day inspired students to reflect on leadership and service. Faculty and guest speakers shared insights on Vivekananda’s vision.Skits, patriotic songs, and poetry highlighted his teachings.Students expressed how his ideals motivate them in academics, spirituality, and social service.This day reinforced the message of self-belief and responsibility among students."
    ,
@@ -33,7 +33,7 @@ const Youthfest = () => {
     {
       id: 2,
       title: " Lohri Night",
-      date: " January 13, 2024 ",
+      date: " January 13, 2026 ",
       location: "VLTC Back Porch",
       description: "Lohri Night ,The festival began with the warmth of Lohri, celebrated with a traditional bonfire. Students circled around the flames, singing Punjabi folk songs, performing bhangra, and enjoying festive delicacies like popcorn, peanuts, and gajak. Lohri night symbolized unity and gratitude for prosperity and new beginnings."
       ,impact: "100+ people attended ",
@@ -42,7 +42,7 @@ const Youthfest = () => {
      {
       id: 3,
       title: " Makar Sankranti  ",
-      date: "January 14, 2024",
+      date: "January 14, 2026",
       location: "OAT",
       description: "The skies above MNIT Jaipur filled with colourful kites as students celebrated Makar Sankranti with joy. Kite-flying competitions created a lively spirit of friendly rivalry, while traditional sweets like til-gud laddoos added festive flavour. The day captured the cultural essence of renewal, positivity, and celebration."
   , impact: "70+ teams participated",
@@ -51,7 +51,7 @@ const Youthfest = () => {
     {
       id: 4,
       title: "Traditional Games & Cultural Activities  ",
-      date: "January 13, 2024",
+      date: "January 13, 2026",
       location: "University Grounds",
       description: "The final day brought back the charm of childhood games like Satoliya, Kho-Kho, Tug of War, and Sack Races. Students laughed, competed, and bonded, rediscovering simple joys and teamwork. The closing ceremony featured cultural performances, where music, dance, and theatre created an atmosphere of celebration and togetherness.",
       impact: "500+ students participated",
@@ -127,7 +127,7 @@ const Youthfest = () => {
         whiteSpace: "nowrap", // ✅ keep in one line
       }}
     >
-      Youthfest 2024
+      Youthfest 2026
     </motion.h4>
     <motion.h2
       initial={{ opacity: 0, y: 40 }}
@@ -135,7 +135,7 @@ const Youthfest = () => {
       transition={{ duration: 1, delay: 0.2 }}
       style={{ fontSize: "1.2rem", color: "#d0d0d0", fontWeight: 500 }}
     >
-      Youthfest 2024 at MNIT Jaipur was a four-day festival organized by Think India MNIT, blending tradition, inspiration, and entertainment. The event combined cultural festivities, spiritual reflection, intellectual sessions, and recreational activities — making it one of the most memorable campus festivals.
+      Youthfest 2026 at MNIT Jaipur was a three-day festival organized by Think India MNIT, blending tradition, inspiration, and entertainment. The event combined cultural festivities, spiritual reflection, intellectual sessions, and recreational activities — making it one of the most memorable campus festivals.
     </motion.h2>
   </div>
 
@@ -171,7 +171,7 @@ const Youthfest = () => {
 </section>
 {/* <div className="youthfest-card">
             {/* <h3>Dates</h3>
-            <p>January 12 - 14, 2025</p>
+            <p>January 12 - 14, 2026</p>
             <h3>Location</h3>
             <p>MNIT Jaipur Main Campus</p>
           </div> */} */
@@ -307,7 +307,7 @@ const Youthfest = () => {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h2 className="section-title">Impact of Youthfest 2024</h2>
+      <h2 className="section-title">Impact of Youthfest 2026</h2>
     </motion.div>
 
     <div className="impact-points">
@@ -317,7 +317,7 @@ const Youthfest = () => {
         transition={{ duration: 0.6, delay: 0.1 }}
         viewport={{ once: true }}
       >
-        Youthfest 2024 wasn’t just about celebration — it was about creating bonds, reviving traditions, and inspiring change. It
+        Youthfest 2026 wasn’t just about celebration — it was about creating bonds, reviving traditions, and inspiring change. It
       </motion.p>
 
       <ul className="impact-list">
@@ -375,7 +375,7 @@ const Youthfest = () => {
       viewport={{ once: true }}
       className="closing-text"
     >
-      Youthfest 2023 left behind a legacy of joy, inspiration, and community spirit. 
+      Youthfest 2026 left behind a legacy of joy, inspiration, and community spirit. 
       It was a reminder that when young minds come together, they create memories, 
       revive traditions, and spark positive change.
     </motion.p>
