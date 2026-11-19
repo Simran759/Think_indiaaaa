@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaMapMarkerAlt, FaClock, FaUsers } from 'react-icons/fa';
 import './Event.css';
 import Navbar from '../components/Navbar';
-import { time } from 'motion';
+
 const Events = () => {
   // Slideshow images for Our Events
   const slideshowImages = [
