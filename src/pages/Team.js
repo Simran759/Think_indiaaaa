@@ -149,7 +149,7 @@ const Team = () => {
       {/* Executive */}
       <section className="section volunteers" style={{ position: 'relative', zIndex: 2 }}>
         <div className="container text-center">
-          <h2 style={{ color: '#fff' }}>CoreTeam</h2>
+          <h2 style={{ color: '#fff' }}>Executives</h2>
           <div className="team-grid">
             {Executive.map((m, i) => <TeamMember key={m.id} member={m} delay={i * 0.1} />)}
           </div>
